@@ -26,12 +26,21 @@ export const metadata: Metadata = {
     title: "Isaac Onekonga | Développeur full-stack à Kinshasa",
     description:
       "Portfolio d’Isaac Onekonga, développeur full-stack et intégrateur de solutions d’IA à Kinshasa.",
+    images: [
+      {
+        url: "/og-cover-onek.jpg",
+        width: 1200,
+        height: 600,
+        alt: "Isaac Onekonga, développeur full-stack à Kinshasa",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Isaac Onekonga | Développeur full-stack à Kinshasa",
     description:
       "Développeur full-stack et intégrateur de solutions d’IA à Kinshasa. Découvrez mon portfolio.",
+    images: ["/og-cover-onek.jpg"],
   },
   robots: {
     index: true,
