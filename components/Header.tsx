@@ -25,7 +25,7 @@ export default function Header() {
       >
         <span className={`h-px w-3.75 bg-current transition-transform ${menuOpen ? "translate-y-[3.5px] rotate-45" : ""}`} /><span className={`h-px w-3.75 bg-current transition-transform ${menuOpen ? "translate-y-[-3.5px] -rotate-45" : ""}`} />
       </button>
-      <nav id="mobile-navigation" className={`pointer-events-none absolute left-0 right-0 top-full hidden -translate-y-3 grid-cols-1 gap-0 border-b border-white/15 bg-black/95 px-[5vw] opacity-0 transition-[opacity,transform,visibility] duration-300 max-[600px]:grid ${menuOpen ? "pointer-events-auto visible translate-y-0 py-2 opacity-100" : "invisible"}`} aria-label="Navigation principale" aria-hidden={!menuOpen}>
+      <nav id="mobile-navigation" className={`absolute left-0 right-0 top-full hidden grid-cols-1 gap-0 border-b border-white/15 bg-black/95 px-[5vw] transition-[opacity,transform,visibility] duration-300 max-[600px]:grid ${menuOpen ? "pointer-events-auto visible translate-y-0 py-2 opacity-100" : "pointer-events-none invisible -translate-y-3 opacity-0"}`} aria-label="Navigation principale" aria-hidden={!menuOpen}>
         <a className="flex items-center justify-between gap-4 border-b border-white/15 py-4 text-base last:border-0" href="/projets" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>Réalisations<span className="text-sm text-white/50" aria-hidden="true">↗</span></a>
         <a className="flex items-center justify-between gap-4 border-b border-white/15 py-4 text-base last:border-0" href="/#contact" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>Parlons de votre projet<span className="text-sm text-white/50" aria-hidden="true">↗</span></a>
       </nav>
