@@ -2,9 +2,23 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Réalisations",
-  description: "Une sélection de projets web et mobile auxquels j'ai contribué.",
+  title: "Projets web, mobile et IA",
+  description: "Découvrez les réalisations d’Isaac Onekonga, développeur full-stack à Kinshasa : Bracongo Pro, Kadea Online, Radar, KIKS Consulting et Nayaki.",
   alternates: { canonical: "/projets" },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "/projets",
+    title: "Projets web et mobile | Isaac Onek",
+    description: "Applications, plateformes SaaS et sites web réalisés par Isaac Onekonga, développeur full-stack à Kinshasa.",
+    images: [{ url: "/og-cover-onek.jpg", width: 1200, height: 600, alt: "Projets web et mobile d’Isaac Onekonga" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projets web et mobile | Isaac Onek",
+    description: "Applications et plateformes réalisées par Isaac Onekonga, développeur full-stack à Kinshasa.",
+    images: ["/og-cover-onek.jpg"],
+  },
 };
 
 const projects = [

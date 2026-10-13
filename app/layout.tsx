@@ -9,10 +9,10 @@ const instrument = Instrument_Sans({ subsets: ["latin"], variable: "--font-instr
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Isaac Onekonga | Développeur full-stack à Kinshasa",
+    default: "Isaac Onek | Développeur full-stack & IA à Kinshasa",
     template: "%s | Isaac Onekonga",
   },
-  description: "Développeur full-stack à Kinshasa, je conçois des applications web avec Java, Spring Boot, Next.js et des solutions d’intelligence artificielle.",
+  description: "Isaac Onekonga, aussi connu sous le nom d’Isaac Onek, est développeur full-stack à Kinshasa. Applications web et mobiles, Java, Spring Boot, Next.js et développement assisté par l’IA.",
   applicationName: "Portfolio d’Isaac Onekonga",
   authors: [{ name: "Isaac Onekonga" }],
   creator: "Isaac Onekonga",
@@ -22,23 +22,23 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: siteUrl,
     siteName: "Isaac Onekonga",
-    title: "Isaac Onekonga | Développeur full-stack à Kinshasa",
+    title: "Isaac Onek | Développeur full-stack & IA à Kinshasa",
     description:
-      "Portfolio d’Isaac Onekonga, développeur full-stack et intégrateur de solutions d’IA à Kinshasa.",
+      "Portfolio d’Isaac Onekonga (Isaac Onek), développeur full-stack à Kinshasa spécialisé en applications web, mobile et intégration de l’intelligence artificielle.",
     images: [
       {
         url: "/og-cover-onek.jpg",
         width: 1200,
         height: 600,
-        alt: "Isaac Onekonga, développeur full-stack à Kinshasa",
+        alt: "Portfolio d’Isaac Onek, développeur full-stack et intégrateur IA à Kinshasa",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Isaac Onekonga | Développeur full-stack à Kinshasa",
+    title: "Isaac Onek | Développeur full-stack & IA à Kinshasa",
     description:
-      "Développeur full-stack et intégrateur de solutions d’IA à Kinshasa. Découvrez mon portfolio.",
+      "Isaac Onekonga, alias Isaac Onek : développeur full-stack et intégrateur IA à Kinshasa. Découvrez ses projets web et mobiles.",
     images: ["/og-cover-onek.jpg"],
   },
   robots: {
