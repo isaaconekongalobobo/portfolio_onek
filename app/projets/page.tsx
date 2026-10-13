@@ -65,7 +65,6 @@ export default function ProjectsPage() {
       <Header />
       <main className="work-page">
         <div className="work-intro">
-          <a className="back-home" href="/">← Retour au portfolio</a>
           <p className="work-eyebrow">Sélection · 2024—2026</p>
           <h1>Des idées<br />en mouvement<span>.</span></h1>
           <p className="work-lead">Des expériences web et mobile conçues pour répondre à des besoins concrets.</p>
