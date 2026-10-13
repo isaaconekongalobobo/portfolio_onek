@@ -12,9 +12,10 @@ const employers = [
 
 function EmployerLogos({ duplicate = false }: { duplicate?: boolean }) {
   return employers.map((employer) => (
-    <div className="employer-logo" key={`${duplicate ? "copy-" : ""}${employer.name}`}>
+    <div className="grid aspect-square w-[clamp(150px,17vw,220px)] flex-none place-items-center" key={`${duplicate ? "copy-" : ""}${employer.name}`}>
       <Image
         src={employer.src}
+        className="size-full object-contain grayscale opacity-70 transition-[filter,opacity] duration-300 hover:grayscale-0 hover:opacity-100"
         alt={duplicate ? "" : employer.name}
         aria-hidden={duplicate}
         width={220}
@@ -26,11 +27,11 @@ function EmployerLogos({ duplicate = false }: { duplicate?: boolean }) {
 
 export default function Employers() {
   return (
-    <section className="employers" aria-label="Anciens employeurs">
-      <h2>Ils m&apos;ont fait confiance...</h2>
-      <div className="employer-marquee">
-        <div className="employer-track ">
-          <div className="employer-group">
+    <section className="relative overflow-hidden px-[6vw] py-[clamp(3rem,7vw,6rem)] pl-[max(8vw,96px)] max-[900px]:pl-[6vw] motion-reduce:[&_*]:[animation-play-state:paused]" aria-label="Anciens employeurs">
+      <h2 className="mb-12 max-w-[16ch] font-display text-[clamp(2.4rem,6.4vw,6.4rem)] leading-[1.02]">Ils m&apos;ont fait confiance...</h2>
+      <div className="overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+        <div className="my-5 flex w-max animate-[employer-scroll_30s_linear_infinite] hover:[animation-play-state:paused]">
+          <div className="flex items-center justify-around gap-[clamp(3rem,7vw,7rem)] pr-[clamp(3rem,7vw,7rem)]">
             <EmployerLogos />
           </div>
         </div>

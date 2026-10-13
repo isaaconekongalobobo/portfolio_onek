@@ -17,13 +17,13 @@ export default function Skills() {
     });
   });
   return (
-    <section id="skills" ref={sec}>
-      <h2>La boîte à outils</h2>
-      <div className="mq" ref={mq} aria-hidden="true">
-        {[0, 1, 2].map((i) => <div key={i}>{W + W}</div>)}
+    <section id="skills" className="relative px-[6vw] py-[clamp(5rem,12vw,11rem)] pl-[max(8vw,96px)] max-[900px]:pl-[6vw]" ref={sec}>
+      <h2 className="max-w-[16ch] font-display text-[clamp(2.4rem,6.4vw,6.4rem)] leading-[1.02] tracking-[-.01em]">La boîte à outils</h2>
+      <div className="my-12 grid gap-1 overflow-hidden" aria-hidden="true" ref={mq}>
+        {[0, 1, 2].map((i) => <div className={`w-max whitespace-nowrap font-display text-[clamp(3rem,9vw,8rem)] leading-[1.05] will-change-transform ${i % 2 ? "text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,.55)]" : ""}`} key={i}>{W + W}</div>)}
       </div>
-      <div className="sk">
-        {SKILLS.map((s) => (<div key={s.t}><h3>{s.t}</h3><p>{s.p}</p></div>))}
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-x-[4vw] gap-y-12">
+        {SKILLS.map((s) => (<div key={s.t}><h3 className="mb-4 border-b border-white/15 pb-3 font-display text-2xl font-normal">{s.t}</h3><p className="leading-[1.9] text-[#8a8a8a]">{s.p}</p></div>))}
       </div>
     </section>
   );

@@ -12,8 +12,7 @@ export const metadata: Metadata = {
     default: "Isaac Onekonga | Développeur full-stack à Kinshasa",
     template: "%s | Isaac Onekonga",
   },
-  description:
-    "Développeur full-stack à Kinshasa, je conçois des applications web avec Java, Spring Boot, Next.js et des solutions d’intelligence artificielle.",
+  description: "Développeur full-stack à Kinshasa, je conçois des applications web avec Java, Spring Boot, Next.js et des solutions d’intelligence artificielle.",
   applicationName: "Portfolio d’Isaac Onekonga",
   authors: [{ name: "Isaac Onekonga" }],
   creator: "Isaac Onekonga",
@@ -53,7 +52,9 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, view
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${marcellus.variable} ${instrument.variable}`}>
-      <body>{children}</body>
+      <body className="group/site">
+        <div className="min-h-screen overflow-x-clip bg-black text-white antialiased">{children}</div>
+      </body>
     </html>
   );
 }

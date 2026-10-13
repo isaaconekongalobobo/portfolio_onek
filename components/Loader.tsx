@@ -19,9 +19,9 @@ export default function Loader() {
     return () => { cancelAnimationFrame(id); clearTimeout(to); };
   }, []);
   return (
-    <div id="pre" aria-hidden="true">
-      <Image src="/logo-white.png" alt="" width={643} height={141} priority />
-      <b ref={cnt}>0</b>
+    <div className="fixed inset-0 z-[100] grid place-items-center bg-black transition-transform duration-1000 ease-portfolio group-[.go]/site:-translate-y-full motion-reduce:hidden" aria-hidden="true">
+      <Image className="w-[min(60vw,360px)] animate-[pulse_1.8s_ease-in-out_infinite]" src="/logo-white.png" alt="" width={643} height={141} priority />
+      <b className="absolute bottom-[calc(6vh+env(safe-area-inset-bottom,0px))] right-[6vw] font-display text-[clamp(4rem,12vw,9rem)] leading-none font-normal" ref={cnt}>0</b>
     </div>
   );
 }

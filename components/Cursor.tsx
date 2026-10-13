@@ -8,8 +8,9 @@ export default function Cursor() {
   useEffect(() => {
     const move = (e: PointerEvent) => { p.current.x = e.clientX; p.current.y = e.clientY; };
     const over = (e: PointerEvent) => {
-      const hit = (e.target as Element)?.closest?.("a,button,.row");
-      el.current?.classList.toggle("h", !!hit);
+      const hit = (e.target as Element)?.closest?.("a,button,[data-cursor-hover]");
+      if (hit) el.current?.classList.add("size-16", "-m-8");
+      else el.current?.classList.remove("size-16", "-m-8");
     };
     window.addEventListener("pointermove", move);
     window.addEventListener("pointerover", over);
@@ -20,5 +21,5 @@ export default function Cursor() {
     c.px += (c.x - c.px) * 0.18; c.py += (c.y - c.py) * 0.18;
     if (el.current) el.current.style.transform = `translate(${c.px}px,${c.py}px)`;
   });
-  return <div ref={el} className="cur" aria-hidden="true" />;
+  return <div ref={el} className="pointer-events-none fixed left-0 top-0 z-[200] -m-[7px] hidden size-[14px] rounded-full bg-white mix-blend-difference transition-[width,height,margin] duration-300 [transform:translate(-50px,-50px)] [@media(hover:hover)]:block" aria-hidden="true" />;
 }
